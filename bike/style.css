@@ -1,0 +1,305 @@
+*{
+  margin:0; padding:0; box-sizing:border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body{
+  background:#0e0e0e;      /* Dark background */
+  color:#e5e5e5;           /* Light text */
+}
+
+/* NAVBAR */
+nav{
+  width:100%; 
+  background:#1a1a1a;      /* Dark nav bar */
+  padding:15px 25px;
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center;
+  color:#fff; 
+  position:sticky; 
+  top:0; 
+  z-index:1000;
+}
+
+nav .logo{
+  font-size:24px; 
+  font-weight:bold;
+  letter-spacing:1px;
+  color:#ffa64d;           /* Accent color */
+}
+
+nav ul{
+  display:flex; 
+  gap:25px; 
+  list-style:none;
+}
+
+nav ul li a{
+  color:#ddd; 
+  text-decoration:none; 
+  font-size:17px;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#ffa64d; 
+  transform:scale(1.05);
+}
+
+/* Mobile nav */
+.menu-btn{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:#ffa64d;
+}
+
+@media(max-width:768px){
+  nav ul{
+    position:absolute;
+    top:60px; 
+    left:0;
+    flex-direction:column;
+    background:#1a1a1a;
+    width:100%;
+    display:none;
+    padding:20px 0;
+  }
+  nav ul.show{
+    display:flex;
+  }
+  .menu-btn{ display:block; }
+}
+
+/* Hero Section */
+.hero{
+  height:90vh;
+  background:url('https://images.pexels.com/photos/60223/motorcycle-ride-motorcycle-helmet-60223.jpeg') center/cover;
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  text-align:center; 
+  color:white;
+  padding:20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+.hero h1{
+  font-size:48px; 
+  font-weight:bold; 
+}
+
+.hero p{
+  margin-top:15px; 
+  font-size:20px;
+}
+
+/* Sections */
+.section{
+  padding:60px 10%;
+  text-align:center;
+}
+
+.section h2{
+  margin-bottom:20px;
+  font-size:32px;
+  color:#ffa64d;            /* Accent heading */
+}
+
+/* Cards */
+.cards{
+  display:flex; 
+  justify-content:center; 
+  gap:25px; 
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.card{
+  width:300px; 
+  background:#1c1c1c;       /* Dark card */
+  padding:20px;
+  border-radius:10px; 
+  box-shadow:0 2px 6px #000;
+  transition:0.3s;
+  color:#ddd;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 5px 12px #000;
+}
+
+.card img{
+  width:100%; 
+  height:180px; 
+  object-fit:cover; 
+  border-radius:5px;
+}
+
+.card h3{
+  margin:15px 0 10px;
+  font-size:22px;
+  color:#ffa64d;
+}
+
+.card p{
+  font-size:15px;
+  color:#bbb;
+}
+
+/* Gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.gallery img{
+  width:100%; 
+  height:220px; 
+  object-fit:cover; 
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.03);
+}
+
+/* Testimonials */
+.testimonials{
+  display:flex;
+  gap:30px; 
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.testimonial{
+  background:#1c1c1c;
+  padding:25px; 
+  max-width:350px;
+  border-radius:10px; 
+  box-shadow:0 2px 6px #000;
+  text-align:left;
+  color:#ccc;
+}
+
+.testimonial p{
+  font-style:italic; 
+  color:#bbb;
+}
+
+.testimonial h4{
+  margin-top:15px;
+  font-size:18px;
+  color:#ffa64d;
+}
+
+/* Contact Form */
+.contact-form{
+  background:#1c1c1c; 
+  padding:30px; 
+  width:100%; 
+  max-width:500px;
+  margin:auto; 
+  border-radius:10px; 
+  box-shadow:0 2px 6px #000;
+  color:#ddd;
+}
+
+input, textarea{
+  width:100%; 
+  padding:12px; 
+  margin:10px 0;
+  border:1px solid #444; 
+  background:#111;
+  color:#eee;
+  border-radius:5px;
+}
+
+button{
+  width:100%; 
+  padding:12px; 
+  background:#ffa64d; 
+  border:none;
+  color:#111; 
+  font-size:18px;
+  font-weight:bold;
+  border-radius:5px; 
+  cursor:pointer;
+}
+
+button:hover{ 
+  background:#ff8c1a; 
+}
+
+/* Footer */
+footer{
+  background:#1a1a1a; 
+  color:white;
+  text-align:center; 
+  padding:30px 20px;
+  margin-top:60px;
+}
+
+footer .socials{
+  margin:15px 0;
+}
+
+footer .socials a{
+  color:white; 
+  margin:0 10px;
+  font-size:22px; 
+  text-decoration:none;
+  transition:0.3s;
+}
+
+footer .socials a:hover{
+  color:#ffa64d;
+  transform:scale(1.2);
+}
+
+/* Team Cards */
+.team-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.member {
+  width: 280px;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  color:#eee;
+}
+
+.member img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.member h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #ffa64d;
+}
+
+.member p {
+  font-size: 16px;
+  color: #ccc;
+}
